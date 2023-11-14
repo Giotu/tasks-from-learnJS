@@ -1,1 +1,1 @@
-# tasks-from-learnJS
+[LearnJS](https://learn.javascript.ru/)
