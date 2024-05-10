@@ -1,1 +1,5 @@
-[LearnJS](https://learn.javascript.ru/)
+# [The Modern JavaScript Tutorial](https://learn.javascript.ru/)
+
+## JavaScript Fundamentals
+
+- [Variables](.//JavaScript%20Fundamentals/variables.js)
