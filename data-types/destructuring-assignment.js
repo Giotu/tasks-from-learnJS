@@ -1,8 +1,8 @@
 // У нас есть объект:
 
 let user = {
-	name: "John",
-	years: 30,
+  name: "John",
+  years: 30,
 };
 // Напишите деструктурирующее присваивание, которое:
 
@@ -22,9 +22,9 @@ console.log(isAdmin); // false
 // У нас есть объект salaries с зарплатами:
 
 let salaries = {
-	John: 100,
-	Pete: 300,
-	Mary: 250,
+  John: 100,
+  Pete: 300,
+  Mary: 250,
 };
 // Создайте функцию topSalary(salaries), которая возвращает имя самого высокооплачиваемого сотрудника.
 
@@ -33,18 +33,18 @@ let salaries = {
 // P.S. Используйте Object.entries и деструктурирование, чтобы перебрать пары ключ/значение.
 
 function topSalary(salaries) {
-	if (Object.keys(salaries).length === 0) {
-		return null;
-	}
-	let max = 0;
-	let resultName = "";
-	for (const [name, salary] of Object.entries(salaries)) {
-		if (max < salary) {
-			max = salary;
-			resultName = name;
-		}
-	}
-	return resultName;
+  if (Object.keys(salaries).length === 0) {
+    return null;
+  }
+  let max = 0;
+  let resultName = "";
+  for (const [name, salary] of Object.entries(salaries)) {
+    if (max < salary) {
+      max = salary;
+      resultName = name;
+    }
+  }
+  return resultName;
 }
 
 console.log(topSalary(salaries));
