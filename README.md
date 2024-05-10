@@ -3,3 +3,4 @@
 ## JavaScript Fundamentals
 
 - [Variables](.//JavaScript%20Fundamentals/variables.js)
+- [Data types](.//JavaScript%20Fundamentals/types.js)
