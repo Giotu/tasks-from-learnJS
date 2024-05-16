@@ -6,3 +6,4 @@
 - [Data types](.//JavaScript%20Fundamentals/types.js)
 - [Basic operators](.//JavaScript%20Fundamentals/operators.js)
 - [Comparisons](.//JavaScript%20Fundamentals/comparison.js)
+- [Conditional branching: if, '?'](.//JavaScript%20Fundamentals/ifelse.js)
