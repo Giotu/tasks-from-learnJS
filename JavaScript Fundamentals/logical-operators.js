@@ -1,3 +1,34 @@
+// Что выведет код ниже?
+
+console.log(null || 2 || undefined); //2
+
+// Что выведет код ниже?
+
+alert(alert(1) || 2 || alert(3)); // 1 и 2
+
+// Что выведет код ниже?
+
+alert(1 && null && 2); // null
+
+// Что выведет код ниже?
+
+alert(alert(1) && alert(2)); //1 and undefined
+
+// Что выведет код ниже?
+
+alert(null || (2 && 3) || 4); //3
+
+// Что выведет код ниже?
+
+let value = NaN;
+
+value &&= 10;
+value ||= 20;
+value &&= 30;
+value ||= 40;
+
+alert(value); // 30
+
 // Проверка значения из диапазона
 // важность: 3
 // Напишите условие if для проверки, что переменная age находится в диапазоне между 14 и 90 включительно.
@@ -31,16 +62,16 @@
 let login = prompt("Введите логин");
 let password;
 if (login === "Админ") {
-	password = prompt("Введите пароль");
-	if (password === "Я главный") {
-		alert("Здравствуйте");
-	} else if (password === null || password === "") {
-		alert("Отменено");
-	} else {
-		alert("Неверный пароль");
-	}
+  password = prompt("Введите пароль");
+  if (password === "Я главный") {
+    alert("Здравствуйте");
+  } else if (password === null || password === "") {
+    alert("Отменено");
+  } else {
+    alert("Неверный пароль");
+  }
 } else if (login === null || login === "") {
-	alert("Отменено");
+  alert("Отменено");
 } else {
-	alert("Я вас не знаю");
+  alert("Я вас не знаю");
 }
