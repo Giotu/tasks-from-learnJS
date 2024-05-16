@@ -7,3 +7,4 @@
 - [Basic operators](.//JavaScript%20Fundamentals/operators.js)
 - [Comparisons](.//JavaScript%20Fundamentals/comparison.js)
 - [Conditional branching: if, '?'](.//JavaScript%20Fundamentals/ifelse.js)
+- [Logical operators](./JavaScript%20Fundamentals/logical-operators.js)
