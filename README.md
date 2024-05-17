@@ -16,4 +16,4 @@
 
 ## Objects: the basics
 
--[Objects](./Objects%20the%20basics/object.js)
+- [Objects](./Objects%20the%20basics/object.js)
