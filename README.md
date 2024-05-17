@@ -8,3 +8,4 @@
 - [Comparisons](.//JavaScript%20Fundamentals/comparison.js)
 - [Conditional branching: if, '?'](.//JavaScript%20Fundamentals/ifelse.js)
 - [Logical operators](./JavaScript%20Fundamentals/logical-operators.js)
+- [Nullish coalescing operator '??'](.//JavaScript%20Fundamentals/nullish-operators.js)
