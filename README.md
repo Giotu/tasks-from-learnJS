@@ -11,3 +11,4 @@
 - [Nullish coalescing operator '??'](.//JavaScript%20Fundamentals/nullish-operators.js)
 - [Loops: while and for](./JavaScript%20Fundamentals/while-for.js)
 - [The "switch" statement](.//JavaScript%20Fundamentals/switch.js)
+- [Functions](.//JavaScript%20Fundamentals/function-basics.js)
