@@ -3,25 +3,25 @@
 let i = 3;
 
 while (i) {
-	alert(i--);
+  alert(i--);
 }
 //1
 
 // При помощи цикла for выведите чётные числа от 2 до 10.
 
 for (let i = 0; i < 10; i += 2) {
-	console.log(i);
+  console.log(i);
 }
 
 //Перепишите код, заменив цикл for на while, без изменения поведения цикла.
 
 for (let i = 0; i < 3; i++) {
-	alert(`number ${i}!`);
+  alert(`number ${i}!`);
 }
 
 let a = 0;
 while (a < 3) {
-	alert(`number ${a++}!`);
+  alert(`number ${a++}!`);
 }
 
 // Напишите цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
@@ -30,8 +30,8 @@ while (a < 3) {
 
 let value;
 do {
-	value = prompt("Введите число больше 100");
-	if (value === null) break;
+  value = prompt("Введите число больше 100");
+  if (value === null) break;
 } while (+value <= 100);
 
 // Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1.
@@ -44,10 +44,10 @@ do {
 let n = 10;
 
 loop: for (let i = 2; i <= n; i++) {
-	for (let j = 2; j < i; j++) {
-		if (i % j === 0) {
-			continue loop;
-		}
-	}
-	console.log(i);
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) {
+      continue loop;
+    }
+  }
+  console.log(i);
 }
