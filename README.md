@@ -13,3 +13,7 @@
 - [The "switch" statement](.//JavaScript%20Fundamentals/switch.js)
 - [Functions](.//JavaScript%20Fundamentals/function-basics.js)
 - [Arrow functions, the basics](./JavaScript%20Fundamentals/arrow-functions-basics.js)
+
+## Objects: the basics
+
+-[Objects](./Objects%20the%20basics/object.js)
