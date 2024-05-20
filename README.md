@@ -17,3 +17,4 @@
 ## Objects: the basics
 
 - [Objects](./Objects%20the%20basics/object.js)
+- [Object methods, "this"](./Objects%20the%20basics/object-methods.js)
