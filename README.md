@@ -18,3 +18,4 @@
 
 - [Objects](./Objects%20the%20basics/object.js)
 - [Object methods, "this"](./Objects%20the%20basics/object-methods.js)
+- [Constructor, operator "new"](./Objects%20the%20basics/constructor-new.js)
