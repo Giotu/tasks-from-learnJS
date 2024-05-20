@@ -23,3 +23,4 @@
 ## Data types
 
 - [Numbers](./data-types/number.js)
+- [Strings](./data-types/string.js)
