@@ -7,12 +7,12 @@
 // camelize("-webkit-transition") == 'WebkitTransition';
 
 const camelize = (str) => {
-	console.log(
-		str
-			.split("-")
-			.map((elem, index) => (index === 0 ? elem : elem[0].toUpperCase() + elem.slice(1)))
-			.join("")
-	);
+  console.log(
+    str
+      .split("-")
+      .map((elem, index) => (index === 0 ? elem : elem[0].toUpperCase() + elem.slice(1)))
+      .join("")
+  );
 };
 
 camelize("background-color");
@@ -32,7 +32,7 @@ console.log(filtered); // 3,1 (совпадающие значения)
 console.log(arr); // 5,3,8,1 (без изменений)
 
 function filterRange(arr, a, b) {
-	return arr.filter((elem) => elem >= a && elem <= b);
+  return arr.filter((elem) => elem >= a && elem <= b);
 }
 
 // Напишите функцию filterRangeInPlace(arr, a, b), которая принимает массив arr и удаляет из него все значения кроме тех,
@@ -47,12 +47,12 @@ filterRangeInPlace(newArr, 1, 4); // удалены числа вне диапа
 console.log(newArr); // [3, 1]
 
 function filterRangeInPlace(arr, a, b) {
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] < a || arr[i] > b) {
-			arr.splice(i, 1);
-			i--;
-		}
-	}
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < a || arr[i] > b) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
 }
 
 // Сортировать в порядке по убыванию
@@ -70,7 +70,7 @@ let arrCopy = ["HTML", "JavaScript", "CSS"];
 let sorted = copySorted(arrCopy);
 
 function copySorted(arr) {
-	return [...arr].sort();
+  return [...arr].sort();
 }
 
 console.log(sorted); // CSS, HTML, JavaScript
@@ -100,8 +100,8 @@ let masha2 = { name: "Маша", surname: "Петрова", id: 3 };
 let users2 = [vasya2, petya2, masha2];
 
 let usersMapped = users2.map((elem) => ({
-	fullName: `${elem.name}  ${elem.surname}`,
-	id: elem.id,
+  fullName: `${elem.name}  ${elem.surname}`,
+  id: elem.id,
 }));
 
 /*
@@ -132,7 +132,7 @@ console.log(arr3[1].name); // Маша
 console.log(arr3[2].name); // Петя
 
 function sortByAge(arr) {
-	arr.sort((a, b) => a.age - b.age);
+  arr.sort((a, b) => a.age - b.age);
 }
 
 // Напишите функцию shuffle(array), которая перемешивает (переупорядочивает случайным образом) элементы массива.
@@ -150,7 +150,7 @@ shuffle(shuffleArr);
 shuffle(shuffleArr);
 // arr = [3, 1, 2]
 function shuffle(arr) {
-	console.log(arr.sort(() => Math.random() - 0.5));
+  console.log(arr.sort(() => Math.random() - 0.5));
 }
 
 // Напишите функцию getAverageAge(users), которая принимает массив объектов со свойством age и возвращает средний возраст.
@@ -166,7 +166,7 @@ let arrAverage = [vasyaObj, petyaObj, mashaObj];
 console.log(getAverageAge(arrAverage)); // (25 + 30 + 29) / 3 = 28
 
 function getAverageAge(arr) {
-	return arr.reduce((acc, item) => acc + item.age, 0) / arr.length;
+  return arr.reduce((acc, item) => acc + item.age, 0) / arr.length;
 }
 
 // Пусть arr – массив строк.
@@ -174,27 +174,27 @@ function getAverageAge(arr) {
 // Например:
 
 function unique(arr) {
-	let newArr = [];
-	for (const elem of arr) {
-		if (newArr.includes(elem)) {
-			continue;
-		} else {
-			newArr.push(elem);
-		}
-	}
-	return newArr;
+  let newArr = [];
+  for (const elem of arr) {
+    if (newArr.includes(elem)) {
+      continue;
+    } else {
+      newArr.push(elem);
+    }
+  }
+  return newArr;
 }
 
 let strings = [
-	"кришна",
-	"кришна",
-	"харе",
-	"харе",
-	"харе",
-	"харе",
-	"кришна",
-	"кришна",
-	":-O",
+  "кришна",
+  "кришна",
+  "харе",
+  "харе",
+  "харе",
+  "харе",
+  "кришна",
+  "кришна",
+  ":-O",
 ];
 
 console.log(unique(strings)); // кришна, харе, :-O
@@ -204,18 +204,18 @@ console.log(unique(strings)); // кришна, харе, :-O
 // Например:
 
 let usersArr = [
-	{ id: "john", name: "John Smith", age: 20 },
-	{ id: "ann", name: "Ann Smith", age: 24 },
-	{ id: "pete", name: "Pete Peterson", age: 31 },
+  { id: "john", name: "John Smith", age: 20 },
+  { id: "ann", name: "Ann Smith", age: 24 },
+  { id: "pete", name: "Pete Peterson", age: 31 },
 ];
 
 let usersById = groupById(usersArr);
 
 function groupById(arr) {
-	return arr.reduce((acc, elem) => {
-		acc[elem.id] = elem;
-		return acc;
-	}, {});
+  return arr.reduce((acc, elem) => {
+    acc[elem.id] = elem;
+    return acc;
+  }, {});
 }
 
 /*
@@ -246,19 +246,19 @@ console.log(usersById);
 // alert(result); // 8
 
 function Calculator() {
-	this.methods = {
-		"-": (a, b) => a - b,
-		"+": (a, b) => a + b,
-	};
+  this.methods = {
+    "-": (a, b) => a - b,
+    "+": (a, b) => a + b,
+  };
 
-	this.calculate = function (str) {
-		let [first, operator, last] = str.split(" ");
-		return this.methods[operator](+first, +last);
-	};
+  this.calculate = function (str) {
+    let [first, operator, last] = str.split(" ");
+    return this.methods[operator](+first, +last);
+  };
 
-	this.addMethod = function (name, func) {
-		this.methods[name] = func;
-	};
+  this.addMethod = function (name, func) {
+    this.methods[name] = func;
+  };
 }
 
 let powerCalc = new Calculator();
