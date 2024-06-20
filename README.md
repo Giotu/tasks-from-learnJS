@@ -25,3 +25,4 @@
 - [Numbers](./data-types/number.js)
 - [Strings](./data-types/string.js)
 - [Array methods](./data-types/array-methods.js)
+- [Map and Set](./data-types/map-set.js)

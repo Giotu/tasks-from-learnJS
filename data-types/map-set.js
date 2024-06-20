@@ -3,19 +3,19 @@
 // Например:
 
 function unique(arr) {
-	return Array.from(new Set(arr));
+  return Array.from(new Set(arr));
 }
 
 let values = [
-	"Hare",
-	"Krishna",
-	"Hare",
-	"Krishna",
-	"Krishna",
-	"Krishna",
-	"Hare",
-	"Hare",
-	":-O",
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
 ];
 
 console.log(unique(values)); // Hare,Krishna,:-O
@@ -29,9 +29,9 @@ console.log(unique(values)); // Hare,Krishna,:-O
 // Например:
 
 function aclean(arr) {
-	let map = new Map();
-	arr.map((item) => map.set(item.toLowerCase().split("").sort().join(""), item));
-	return Array.from(map.values());
+  let map = new Map();
+  arr.forEach((item) => map.set(item.toLowerCase().split("").sort().join(""), item));
+  return Array.from(map.values());
 }
 
 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
