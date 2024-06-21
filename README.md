@@ -27,3 +27,4 @@
 - [Array methods](./data-types/array-methods.js)
 - [Map and Set](./data-types/map-set.js)
 - [Object.keys, values, entries](./data-types/keys-values-entries.js)
+- [Destructuring assignment](./data-types/destructuring-assignment.js)
