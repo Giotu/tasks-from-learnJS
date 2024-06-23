@@ -3,9 +3,9 @@
 // Например:
 
 function sum(a) {
-	return function (b) {
-		return a + b;
-	};
+  return function (b) {
+    return a + b;
+  };
 }
 
 console.log(sum(14)(4));
@@ -23,14 +23,14 @@ console.log(sum(14)(4));
 /* .. ваш код для inBetween и inArray */
 
 function inBetween(a, b) {
-	return function (x) {
-		return x >= a && x <= b;
-	};
+  return function (x) {
+    return x >= a && x <= b;
+  };
 }
 function inArray(array) {
-	return function (x) {
-		return array.includes(x);
-	};
+  return function (x) {
+    return array.includes(x);
+  };
 }
 
 let arr = [1, 2, 3, 4, 5, 6, 7];
@@ -42,9 +42,9 @@ console.log(arr.filter(inArray([1, 2, 10]))); // 1,2
 // У нас есть массив объектов, который нужно отсортировать:
 
 let users = [
-	{ name: "John", age: 20, surname: "Johnson" },
-	{ name: "Pete", age: 18, surname: "Peterson" },
-	{ name: "Ann", age: 19, surname: "Hathaway" },
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" },
 ];
 // Обычный способ был бы таким:
 
@@ -59,9 +59,9 @@ console.log(users.sort(byField("name")));
 console.log(users.sort(byField("age")));
 
 function byField(str) {
-	return function (a, b) {
-		return a[str] > b[str] ? 1 : -1;
-	};
+  return function (a, b) {
+    return a[str] > b[str] ? 1 : -1;
+  };
 }
 // То есть чтобы вместо функции мы просто писали byField(fieldName).
 
