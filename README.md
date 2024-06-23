@@ -29,3 +29,7 @@
 - [Object.keys, values, entries](./data-types/keys-values-entries.js)
 - [Destructuring assignment](./data-types/destructuring-assignment.js)
 - [Date and time](./data-types/date.js)
+
+## Advanced working with functions
+
+- [Recursion and stack](./advanced-functions/recursion.js)
