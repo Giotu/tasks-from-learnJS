@@ -36,3 +36,4 @@
 - [Variable scope, closure](./advanced-functions/closure.js)
 - [Function object, NFE](./advanced-functions/function-object.js)
 - [Scheduling: setTimeout and setInterval](./advanced-functions/settimeout-setinterval.js)
+- [Decorators and forwarding, call/apply](./advanced-functions/call-apply-decorators.js)
