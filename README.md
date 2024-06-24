@@ -34,3 +34,4 @@
 
 - [Recursion and stack](./advanced-functions/recursion.js)
 - [Variable scope, closure](./advanced-functions/closure.js)
+- [Function object, NFE](./advanced-functions/function-object.js)

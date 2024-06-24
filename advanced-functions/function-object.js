@@ -5,35 +5,37 @@
 // counter.decrease() должен уменьшать значение счётчика на 1.
 
 // function makeCounter() {
-// 	let count = 0;
+//   let counter = 0;
+//   function f() {
+//     return counter++;
+//   }
 
-// 	function counter() {
-// 		return count++;
-// 	}
+//   f.set = function (value) {
+//     counter = value;
+//   };
 
-// 	counter.set = function (num) {
-// 		count = num;
-// 	};
-// 	counter.decrease = function () {
-// 		count -= 1;
-// 	};
-// 	return counter;
+//   f.decrease = function () {
+//     counter--;
+//   };
+//   return f;
 // }
 
 function makeCounter() {
-	function counter() {
-		return counter.count++;
-	}
+  function func() {
+    return func.counter++;
+  }
 
-	counter.count = 0;
+  func.counter = 0;
 
-	counter.set = function (num) {
-		this.count = num;
-	};
-	counter.decrease = function () {
-		this.count -= 1;
-	};
-	return counter;
+  func.set = function (value) {
+    this.counter = value;
+  };
+
+  func.decrease = function () {
+    this.counter--;
+  };
+
+  return func;
 }
 
 let counter = makeCounter();
@@ -48,5 +50,3 @@ console.log(counter()); // 10
 counter.decrease(); // уменьшить значение счётчика на 1
 
 console.log(counter()); // 10 (вместо 11)
-
-// P.S. Для того, чтобы сохранить текущее значение счётчика, можно воспользоваться как замыканием, так и свойством функции. Или сделать два варианта решения: и так, и так.
