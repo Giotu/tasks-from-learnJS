@@ -38,3 +38,7 @@
 - [Scheduling: setTimeout and setInterval](./advanced-functions/settimeout-setinterval.js)
 - [Decorators and forwarding, call/apply](./advanced-functions/call-apply-decorators.js)
 - [Function binding](./advanced-functions/bind.js)
+
+## Prototypes, inheritance
+
+- [Prototypal inheritance](./Prototypes,%20inheritance/prototype-inheritance.js)
