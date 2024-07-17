@@ -42,3 +42,4 @@
 ## Prototypes, inheritance
 
 - [Prototypal inheritance](./Prototypes,%20inheritance/prototype-inheritance.js)
+- [Native prototypes](./Prototypes,%20inheritance/native-prototypes.js)
