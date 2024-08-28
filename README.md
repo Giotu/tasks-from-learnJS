@@ -47,3 +47,7 @@
 ## Classes
 
 - [Class inheritance](./Classes/class-inheritance.js)
+
+## Promises, async/await
+
+- [Promise](./Promises,%20async%20await/promise-basics.js)
