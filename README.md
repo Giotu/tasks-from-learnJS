@@ -51,3 +51,7 @@
 ## Promises, async/await
 
 - [Promise](./Promises,%20async%20await/promise-basics.js)
+
+## document
+
+- [Walking the DOM](./document/dom-navigation/dom-navigation.js)
