@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Task 1: У нас есть дерево, структурированное как вложенные списки ul/li. Напишите
+      код, который выведет каждый элемент списка li: Какой в нём текст (без поддерева) ?
+      Какое число потомков – всех вложенных li(включая глубоко вложенные) ?
+    </p>
+
+    <ul>
+      <li>
+        Животные
+        <ul>
+          <li>
+            Млекопитающие
+            <ul>
+              <li>Коровы</li>
+              <li>Ослы</li>
+              <li>Собаки</li>
+              <li>Тигры</li>
+            </ul>
+          </li>
+          <li>
+            Другие
+            <ul>
+              <li>Змеи</li>
+              <li>Птицы</li>
+              <li>Ящерицы</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Рыбы
+        <ul>
+          <li>
+            Аквариумные
+            <ul>
+              <li>Гуппи</li>
+              <li>Рыба-ангел</li>
+            </ul>
+          </li>
+          <li>
+            Морские
+            <ul>
+              <li>Морская форель</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+      const div = document.createElement("div");
+      for (const li of document.querySelectorAll("li")) {
+        const count = li.querySelectorAll("li").length;
+        const name = li.firstChild.nodeValue;
+        const p = document.createElement("p");
+        p.textContent = `${name}: ${count}`;
+        div.append(p);
+      }
+      document.body.append(div);
+    </script>
+  </body>
+</html>
