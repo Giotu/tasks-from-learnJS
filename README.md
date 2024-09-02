@@ -59,3 +59,4 @@
 - [Attributes and properties](./document/dom-attributes-and-properties/)
 - [Modifying the document](./document/modifying-document/)
 - [Element size and scrolling](./document/size-and-scroll/)
+- [Coordinates](./document/coordinates/)
