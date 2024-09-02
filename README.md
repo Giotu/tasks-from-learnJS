@@ -57,3 +57,4 @@
 - [Walking the DOM](./document/dom-navigation/dom-navigation.js)
 - [Node properties: type, tag and contents](./document/basic-dom-node-properties/index.html)
 - [Attributes and properties](./document/dom-attributes-and-properties/)
+- [Modifying the document](./document/modifying-document/)
