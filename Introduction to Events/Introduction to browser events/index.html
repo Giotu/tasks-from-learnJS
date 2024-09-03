@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>introduction-browser-events</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root{
+        --translateX: 0px;
+      }
+
+      #field {
+        cursor: pointer;
+        width: 200px;
+        height: 150px;
+        border: 10px solid black;
+        background-color: #00ff00;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #ball {
+        top: 0;
+        left: 0;
+        position: absolute;
+        transition: all 1s;
+      }
+
+      .click::before {
+        content: "\27A4";
+        color: green;
+      }
+
+      .click__open::before {
+        content: "\27A4";
+        transform: rotateZ(90deg);
+        display: inline-block;
+        color: green;
+      }
+
+      .list__close {
+        display: none;
+      }
+
+      h3 {
+        margin: 0;
+        padding-bottom: 0.3em;
+        font-size: 1.1em;
+      }
+
+      p {
+        margin: 0;
+        padding: 0 0 0.5em;
+      }
+
+      .pane {
+        background: #edf5e1;
+        padding: 10px 20px 10px;
+        border-top: solid 2px #c4df9b;
+        position: relative;
+      }
+
+      .remove-button {
+        font-size: 110%;
+        color: darkred;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+      }
+
+      .section {
+        width: 470px;
+      }
+
+      .carousel {
+        display: flex;
+        margin: 40px auto;
+        max-width: 500px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .list {
+        display: flex;
+        list-style-type: none;
+        width: 375px;
+        overflow: hidden;
+      }
+
+      .item-list {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 125px;
+        aspect-ratio: 1 / 2;
+        transform: translateX(var(--translateX));
+        transition: all .6s;
+      }
+
+      .img {
+        width: 100%;
+      }
+
+      .btn{
+        width: 40px;
+        aspect-ratio: 1/1;
+      }
+
+      .btn-prev{
+        transform: rotateZ(180deg);
+      }
+    </style>
+  </head>
+  <body style="height: 2000px">
+    <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+    <div id="text">Текст</div>
+    <div id="field">
+      <img src="https://ru.js.cx/clipart/ball.svg" id="ball" /> . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    </div>
+    <p class="click">Сладости (нажми меня)!</p>
+    <ul class="list list__close">
+      <li>Пирожное</li>
+      <li>Пончик</li>
+      <li>Мёд</li>
+    </ul>
+    <div class="section">
+      <div class="pane">
+        <h3>Лошадь</h3>
+        <p>
+          Домашняя лошадь — животное семейства непарнокопытных, одомашненный и
+          единственный сохранившийся подвид дикой лошади, вымершей в дикой природе, за
+          исключением небольшой популяции лошади Пржевальского.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Осёл</h3>
+        <p>
+          Домашний осёл (лат. Equus asinus asinus), или ишак, — одомашненный подвид дикого
+          осла (Equus asinus), сыгравший важную историческую роль в развитии хозяйства и
+          культуры человека и по-прежнему широко в хозяйстве многих развивающихся стран.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Кошка</h3>
+        <p>
+          Кошка, или домашняя кошка (лат. Felis silvestris catus), — домашнее животное,
+          одно из наиболее популярных(наряду с собакой) «животных-компаньонов». Являясь
+          одиночным охотником на грызунов и других мелких животных, кошка — социальное
+          животное, использующее для общения широкий диапазон звуковых сигналов.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <button class="btn btn-prev">&#10148</button>
+      <ul class="list">
+        <li class="item-list">
+          <img
+            src="https://media.tenor.com/9t7f7Ge7UQoAAAAe/jokerge-jokege.png"
+            alt=""
+            class="img"
+          />
+        </li>
+        <li class="item-list">
+          <img
+            src="https://cdn.7tv.app/emote/65d5cc84069e133ba784d43f/4x.webp"
+            alt=""
+            class="img"
+          />
+        </li>
+        <li class="item-list">
+          <img
+            src="https://cdn.7tv.app/emote/60ae958e229664e8667aea38/4x.webp"
+            alt=""
+            class="img"
+          />
+        </li>
+        <li class="item-list">
+          <img
+            src="https://cdn.7tv.app/emote/6309e73ffe72a7a37ff476f5/4x.webp"
+            alt=""
+            class="img"
+          />
+        </li>
+        <li class="item-list">
+          <img
+            src="https://cdn.7tv.app/emote/60ccf4479f5edeff9938fa77/4x.webp"
+            alt=""
+            class="img"
+          />
+        </li>
+        <li class="item-list">
+          <img
+            src="https://cdn.7tv.app/emote/603caea243b9e100141caf4f/4x.webp"
+            alt=""
+            class="img"
+          />
+        </li>
+        <li class="item-list">
+          <img
+            src="https://cdn.7tv.app/emote/6239577d6cf512e934d3e64a/4x.webp"
+            alt=""
+            class="img"
+          />
+        </li>
+        <li class="item-list">
+          <img
+            src="https://cdn.7tv.app/emote/62e700220529159003a21db8/4x.webp"
+            alt=""
+            class="img"
+          />
+        </li>
+      </ul>
+      <button class="btn btn-next">&#10148</button>
+    </div>
+    <script src="introduction-browser-events.js"></script>
+  </body>
+</html>

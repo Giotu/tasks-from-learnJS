@@ -52,7 +52,7 @@
 
 - [Promise](./Promises,%20async%20await/promise-basics.js)
 
-## document
+## Document
 
 - [Walking the DOM](./document/dom-navigation/dom-navigation.js)
 - [Node properties: type, tag and contents](./document/basic-dom-node-properties/index.html)
@@ -60,3 +60,7 @@
 - [Modifying the document](./document/modifying-document/)
 - [Element size and scrolling](./document/size-and-scroll/)
 - [Coordinates](./document/coordinates/)
+
+## Introduction to Events
+
+- [Introduction to browser events](./Introduction%20to%20Events/Introduction%20to%20browser%20events/)
