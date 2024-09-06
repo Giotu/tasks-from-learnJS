@@ -64,3 +64,4 @@
 ## Introduction to Events
 
 - [Introduction to browser events](./Introduction%20to%20Events/Introduction%20to%20browser%20events/)
+- [Event delegation](./Introduction%20to%20Events/event-delegation/)

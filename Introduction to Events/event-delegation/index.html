@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event-delegation</title>
+    <style>
+      body {
+        margin: 10px auto;
+        width: 470px;
+      }
+
+      h3 {
+        margin: 0;
+        padding-bottom: 0.3em;
+        padding-right: 20px;
+        font-size: 1.1em;
+      }
+
+      p {
+        margin: 0;
+        padding: 0 0 0.5em;
+      }
+
+      .pane {
+        background: #edf5e1;
+        padding: 10px 20px 10px;
+        border-top: solid 2px #c4df9b;
+        position: relative;
+      }
+
+      .remove-button {
+        position: absolute;
+        font-size: 110%;
+        top: 0;
+        color: darkred;
+        right: 10px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 4px;
+      }
+      th {
+        cursor: pointer;
+      }
+      th:hover {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="pane">
+        <h3>Лошадь</h3>
+        <p>
+          Домашняя лошадь - животное семейства непарнокопытных, одомашненный и
+          единственный сохранившийся подвид дикой лошади, вымершей в дикой природе, за
+          исключением небольшой популяции лошади Пржевальского.
+        </p>
+        <button class="remove-button">[x]</button>
+      </div>
+      <div class="pane">
+        <h3>Осёл</h3>
+        <p>
+          Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший важную
+          историческую роль в развитии хозяйства и культуры человека. Все одомашненные
+          ослы относятся к африканским ослам.
+        </p>
+        <button class="remove-button">[x]</button>
+      </div>
+      <div class="pane">
+        <h3>Кошка</h3>
+        <p>
+          Кошка, или домашняя кошка (лат. Félis silvéstris cátus), — домашнее животное,
+          одно из наиболее популярных (наряду с собакой) "животных-компаньонов". С точки
+          зрения научной систематики, домашняя кошка — млекопитающее семейства кошачьих
+          отряда хищных. Ранее домашнюю кошку нередко рассматривали как отдельный
+          биологический вид.
+        </p>
+        <button class="remove-button">[x]</button>
+      </div>
+    </div>
+    <ul class="tree" id="tree">
+      <li>
+        <span> Животные</span>
+        <ul>
+          <li>
+            <span> Млекопитающие</span>
+            <ul>
+              <li><span> Коровы</span></li>
+              <li><span> Ослы</span></li>
+              <li><span> Собаки</span></li>
+              <li><span> Тигры</span></li>
+            </ul>
+          </li>
+          <li>
+            <span> Другие</span>
+            <ul>
+              <li><span> Змеи</span></li>
+              <li><span> Птицы</span></li>
+              <li><span> Ящерицы</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span> Рыбы</span>
+        <ul>
+          <li>
+            <span> Аквариумные</span>
+            <ul>
+              <li><span> Гуппи</span></li>
+              <li><span> Скалярии</span></li>
+            </ul>
+          </li>
+          <li>
+            <span> Морские</span>
+            <ul>
+              <li><span> Морская форель</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <table id="grid">
+      <thead>
+        <tr>
+          <th data-type="number">Возраст</th>
+          <th data-type="string">Имя</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5</td>
+          <td>Вася</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Петя</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Женя</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Маша</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Илья</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="event-delegation.js"></script>
+  </body>
+</html>
