@@ -71,3 +71,4 @@
 - [Mouse events](./UI%20Events/mouse-events-basics/)
 - [Moving the mouse: mouseover/out, mouseenter/leave](./UI%20Events/mousemove-mouseover-mouseout-mouseenter-mouseleave/)
 - [Drag'n'Drop with mouse events](./UI%20Events/mouse-drag-and-drop/)
+- [Keyboard: keydown and keyup](./UI%20Events/keyboard-events/)
