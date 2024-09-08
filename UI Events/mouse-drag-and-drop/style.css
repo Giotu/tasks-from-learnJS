@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  margin: 20px auto;
+  position: relative;
+  box-shadow: 1px 1px 10px black;
+  width: 300px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.thumb {
+  position: absolute;
+  width: 10px;
+  border-radius: 8px;
+  height: 30px;
+  background-color: blue;
+  top: -10px;
+  /* left: 10px; */
+  cursor: pointer;
+}
